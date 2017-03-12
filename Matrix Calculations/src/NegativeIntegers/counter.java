@@ -11,20 +11,20 @@ public class counter {
 		
 		Matrix = new int[10][15]; // Adding Matrix dimensions
 		
-		int cols = Matrix.length; //gets initial length of Matrix
-		int rows = Matrix[0].length;// gets length of the 2nd array, in this case the rows of the Matrix
+		int cols = Matrix[0].length; //gets initial length of Matrix
+		int rows = Matrix.length;// gets length of the 2nd array, in this case the rows of the Matrix
 		
-		for(int i = 0; i < cols; i++){ 
+		for(int i = 0; i < rows; i++){ 
 			
-			for (int j = 0;j < rows; j++){
+			for (int j = 0;j < cols; j++){
 				Matrix[i][j] = 70 - (int)(Math.random() * 100);	//Random initialisation of Matrix positions
 				System.out.print(Matrix[i][j] + " "); //Printing out matrix
 			}
 			System.out.println();
 		}	
 	
-		for(int i = 0; i < cols; i++){
-			for (int j = 0;j < rows; j++){
+		for(int i = 0; i < rows; i++){
+			for (int j = 0;j < cols; j++){
 				if(Matrix[i][j] < 0){
 					negatives++; //looping through array to check for negative values
 				}
